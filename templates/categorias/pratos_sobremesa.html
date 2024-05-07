@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <html lang="PT-BR">
+    <title>Eternize</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
+  <body>
+    <header>
+      {% include "categorias/header.html" %}
+    </header>
+    <main>
+      <section class="produtos">
+        <h2 class="titulo">Pratos Rasos</h2>
+      </section>
+        <section class="cards_container">
+          <section class="cardsSection1">
+            <div class="card">
+                <img src="{% static '/images/pratosob_celebrate_vermelho.png' %}" class="imagem">
+                <p class="dg">Prato de Sobremesa Celebrate Vermelho</p>
+                <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+              </div>
+              <div class="card">
+                <img src="{% static '/images/pratosob_baronesa.png' %}" class="imagem">
+                <p class="dg">Prato Sobremesa Baronesa</p>
+                <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+              </div>
+              <div class="card">
+                <img src="{% static '/images/pratosob_bluegarden.png' %}" class="imagem">
+                <p class="dg">Prato Sobremesa Blue Garden</p>
+                <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+              </div>
+          <section class="cardsSection1">
+            <div class="card">
+              <img src="{% static '/images/Prato_atlantico.png' %}" class="imagem">
+              <p class="dg">Prato raso Atlântica Acetinado</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+            </div>
+            <div class="card">
+                <img src="{% static '/images/prato_monte_carlo.png' %}" class="imagem">
+                <p class="dg">Prato Raso Monte Carlo Findi Filete Ouro</p>
+                <a target="_blank" href="guardanapos.html" class="ancor">modelos</a>
+              </div>
+              <div class="card">
+                <img src="{% static '/images/prato_sorrento.png' %}" class="imagem">
+                <p class="dg">Prato Raso Sorrento</p>
+                <a target="_blank" href="guardanapos.html" class="ancor">modelos</a>
+              </div>
+          </section>
+          <section class="cardsSection1">
+            <div class="card">
+                <img src="{% static '/images/prato rosa fractal.png'%}" class="imagem">
+                <p class="dg">Prato raso rosa Fractal - Porcelana</p>
+                <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+              </div>
+            <div class="card">
+                <img src="{% static '/images/prato_bothanica.png' %}" class="imagem">
+                <p class="dg">Prato raso Bothanica</p>
+                <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+              </div>
+            <div class="card">
+                <img src="{% static '/images/prato_chinese_blue.png' %}" class="imagem">
+                <p class="dg">Prato raso Chinese Blue</p>
+                <a target="_blank" href="guardanapos.html" class="ancor">modelos</a>
+              </div>
+          </section>
+          <section class="cardsSection1">
+            <div class="card">
+                <img src="{% static '/images/prato_fruits.png' %}" class="imagem">
+                <p class="dg">Prato raso Fruits</p>
+                <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+              </div>
+          </section>
+        </section>
+    </main>
+    <footer>
+        <p>oi</p>
+    </footer>
+  </body>
+</html>

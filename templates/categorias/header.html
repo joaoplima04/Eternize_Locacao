@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <html lang="PT-BR">
+    <title>Eternize</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
+  <body>
+    <header>
+      <section class="cabecario">
+        <img src="{% static '/images/logo.png' %}" class="logo">
+        <div class="dirs">
+          <a href="/">
+            <p class="mesage">Home</p>
+          </a>
+          <a href="/pratos">
+            <p class="mesage">Pratos</p>
+          </a>
+          <p class="mesage">Taças</p>
+          <p class="mesage">Guardanapos</p>
+        </div>
+        <div class="login">
+          <a href="/cadastro">
+            <p class="carrinho_mesage">Conta</p>
+          </a>
+          <span class="material-symbols-outlined">
+            person
+            </span>
+        </div>
+        <div class="carrinho">
+          <a href="/carrinho">
+            <p class="carrinho_mesage">Carrinho</p>
+          </a>
+         <span class="material-symbols-outlined">
+          shopping_cart
+          </span>
+        </div>
+      </section>
+    </header>
+</body>
+</html>

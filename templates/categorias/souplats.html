@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <html lang="PT-BR">
+    <title>Eternize</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
+  <body>
+    <header>
+      {% include "categorias/header.html" %}
+    </header>
+    <main>
+      <section class="produtos">
+        <h2 class="titulo">Souplats</h2>
+      </section>
+      <section class="cards_container">
+        <section class="cardsSection1">
+          <div class="card">
+              <img src="{% static '/images/souplat_rosa.png' %}" class="imagem">
+              <p class="dg">Sousplat Basic Rosa</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+            </div>
+            <div class="card">
+              <img src="{% static '/images/souplat_dourado.png' %}" class="imagem">
+              <p class="dg">Sousplat Colonial Circular Dourado</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+            </div>
+            <div class="card">
+              <img src="{% static '/images/souplat_cristal.png' %}" class="imagem">
+              <p class="dg">Sousplat Cristal Pearl - Wolff</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+            </div>
+          <div class="card">
+            <img src="{% static '/images/souplat_cromus.png' %}" class="imagem">
+            <p class="dg">Sousplat Cromus Rosa</p>
+            <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+          </div>
+          <div class="card">
+              <img src="{% static '/images/souplat_bordadourada.png' %}" class="imagem">
+              <p class="dg">Sousplat de Cristal Borda Dourada WOLFF</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">modelos</a>
+            </div>
+            <div class="card">
+              <img src="{% static '/images/souplat_azul.png' %}" class="imagem">
+              <p class="dg">Sousplat de Plástico - Azul Borda Dourada</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">modelos</a>
+            </div>
+          <div class="card">
+              <img src="{% static '/images/souplat_vidroprateado.png' %}" class="imagem">
+              <p class="dg">Sousplat de Vidro Borda Prateada</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+            </div>
+          <div class="card">
+              <img src="{% static '/images/souplat_plasticodourado.png' %}" class="imagem">
+              <p class="dg">Sousplat Dourado Plástico - Wolff</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+            </div>
+          <div class="card">
+              <img src="{% static '/images/souplat_elizabeth.png' %}" class="imagem">
+              <p class="dg">Sousplat Elizabeth - borda dourada - Home Style</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">modelos</a>
+            </div>
+          <div class="card">
+              <img src="{% static '/images/souplat_fendi.png' %}" class="imagem">
+              <p class="dg">Sousplat Fendi</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+          </div>
+          <div class="card">
+              <img src="{% static '/images/souplat_galles.png' %}" class="imagem">
+              <p class="dg">Sousplat Galles Verde</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+          </div>
+        <div class="card">
+          <img src="{% static '/images/souplat_perolado.png' %}" class="imagem">
+          <p class="dg">Sousplat perolado borda dourada</p>
+          <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+        </div>
+        <div class="card">
+          <img src="{% static '/images/souplat_gallesvermelho.png' %}" class="imagem">
+          <p class="dg">Sousplat Galles Vermelho</p>
+          <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+        </div>
+      </section>
+    </section>
+    </main>
+    <footer>
+        <p>oi</p>
+    </footer>
+  </body>
+</html>

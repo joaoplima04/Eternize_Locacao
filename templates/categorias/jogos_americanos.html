@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <html lang="PT-BR">
+    <title>Eternize</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
+  <body>
+    <header>
+      {% include "categorias/header.html" %}
+    </header>
+    <main>
+      <section class="produtos">
+        <h2 class="titulo">Jogos Americanos</h2>
+      </section>
+      <section class="cards_container">
+        <section class="cardsSection1">
+          <div class="card">
+              <img src="{% static '/images/jogoamericano_bordadourada.png' %}" class="imagem">
+              <p class="dg">Jogo Americano - borda dourada</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+            </div>
+            <div class="card">
+              <img src="{% static '/images/jogoamericano_arabesco.png' %}" class="imagem">
+              <p class="dg">Jogo Americano Arabesco</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+            </div>
+            <div class="card">
+              <img src="{% static '/images/jogoamericano_bordaazul.png' %}" class="imagem">
+              <p class="dg">Jogo Americano Borda Azul Marinho</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+            </div>
+          <div class="card">
+            <img src="{% static '/images/jogoamericano_bordadourada2.png' %}" class="imagem">
+            <p class="dg">Jogo Americano Borda Dourada</p>
+            <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+          </div>
+          <div class="card">
+              <img src="{% static '/images/jogoamericano_bordado.png' %}" class="imagem">
+              <p class="dg">Jogo Americano Bordado</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">modelos</a>
+            </div>
+            <div class="card">
+              <img src="{% static '/images/jogoamericano_bordado2.png' %}" class="imagem">
+              <p class="dg">Jogo Americano Bordado</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">modelos</a>
+            </div>
+          <div class="card">
+              <img src="{% static '/images/jogoamericano_bordadoazul.png' %}" class="imagem">
+              <p class="dg">Jogo Americano Bordado Azul Bebê</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+            </div>
+          <div class="card">
+              <img src="{% static '/images/jogoamericano_bordadobranco.png' %}" class="imagem">
+              <p class="dg">Jogo Americano Branco Bordado</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+            </div>
+          <div class="card">
+              <img src="{% static '/images/jogoamericano_duplaface.png' %}" class="imagem">
+              <p class="dg">Jogo Americano Dupla Face Vermelho/Branco Bordado Dourado</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">modelos</a>
+            </div>
+          <div class="card">
+              <img src="{% static '/images/jogoamericano_linhorendado.png' %}" class="imagem">
+              <p class="dg">Jogo Americano em Linho Rendado - Off White</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+          </div>
+          <div class="card">
+              <img src="{% static '/images/jogoamericano_floralbege.png' %}" class="imagem">
+              <p class="dg">Jogo Americano Floral Bege</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+          </div>
+          <div class="card">
+              <img src="{% static '/images/jogoamericano_linhomisto.png' %}" class="imagem">
+              <p class="dg">Jogo Americano Linho Misto Ponto Ajour - Vermelho</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+          </div>
+        <div class="card">
+          <img src="{% static '/images/jogoamericano_preto.png' %}" class="imagem">
+          <p class="dg">Jogo Americano Preto Bordado Branco</p>
+          <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+      </div>
+      <div class="card">
+          <img src="{% static '/images/jogoamericano_tulipas.png' %}" class="imagem">
+          <p class="dg">Jogo Americano Tulipas</p>
+          <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+      </div>
+    </section>
+  </section>
+    </main>
+    <footer>
+        <p>oi</p>
+    </footer>
+  </body>
+</html>

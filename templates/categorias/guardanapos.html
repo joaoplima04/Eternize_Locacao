@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <html lang="PT-BR">
+    <title>Eternize</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
+  <body>
+    <header>
+      {% include "categorias/header.html" %}
+    </header>
+    <main>
+      <section class="produtos">
+        <h2 class="titulo">Guardanapos</h2>
+      </section>
+      <section class="cards_container">
+        <section class="cardsSection1">
+          <div class="card">
+              <img src="{% static '/images/guardanapo_rosa.png' %}" class="imagem">
+              <p class="dg">Guardanapo de linho misto ponto ajour - rosa seco</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+            </div>
+            <div class="card">
+              <img src="{% static '/images/guardanapo_cru.png' %}" class="imagem">
+              <p class="dg">Guardanapo de linho Ponto Ajour - Cru</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+            </div>
+            <div class="card">
+              <img src="{% static '/images/guardanapo_laranja.png' %}" class="imagem">
+              <p class="dg">Guardanapo em Linho Misto Ponto Ajour - Laranja</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+            </div>
+          <div class="card">
+            <img src="{% static '/images/guardanapo_preto.png' %}" class="imagem">
+            <p class="dg">Guardanapo Linho Misto - Preto</p>
+            <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+          </div>
+          <div class="card">
+              <img src="{% static '/images/guardanapo_vermelho.png' %}" class="imagem">
+              <p class="dg">Guardanapo Linho Misto - Vermelho</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">modelos</a>
+            </div>
+            <div class="card">
+              <img src="{% static '/images/guardanapo_amarelo.png' %}" class="imagem">
+              <p class="dg">Guardanapo Linho Misto Ponto Ajour - Amarelo</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">modelos</a>
+            </div>
+          <div class="card">
+              <img src="{% static '/images/guardanapo_rosapink.png' %}" class="imagem">
+              <p class="dg">Guardanapo Linho Misto Ponto Ajour - Rosa Pink</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+            </div>
+          <div class="card">
+              <img src="{% static '/images/guardanapo_terra.png' %}" class="imagem">
+              <p class="dg">Guardanapo Linho Misto Ponto Ajour - Terra Cota</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+            </div>
+          <div class="card">
+              <img src="{% static '/images/guardanapo_verde.png' %}" class="imagem">
+              <p class="dg">Guardanapo Linho Misto Ponto Ajour - Verde Menta</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">modelos</a>
+            </div>
+          <div class="card">
+              <img src="{% static '/images/guardanapo_verdemusgo.png' %}" class="imagem">
+              <p class="dg">Guardanapo linho misto ponto ajour - Verde Musgo</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+          </div>
+          <div class="card">
+              <img src="{% static '/images/guardanapo_vinho.png' %}" class="imagem">
+              <p class="dg">Guardanapo Linho Misto Ponto Ajour - Vinho</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+          </div>
+        <div class="card">
+          <img src="{% static '/images/guardanapo_branco.png' %}" class="imagem">
+          <p class="dg">Guardanapo Linho Misto ponto ajour- Branco</p>
+          <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+        </div>
+        <div class="card">
+          <img src="{% static '/images/guardanapo_azul.png' %}" class="imagem">
+          <p class="dg">Guardanapo Ponto Ajour - Azul Serenity</p>
+          <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+        </div>
+        <div class="card">
+            <img src="{% static '/images/guardanapo_offwhite.png' %}" class="imagem">
+            <p class="dg">Guardanapos com ponto ajour - Off White</p>
+            <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+        </div>
+        <div class="card">
+            <img src="{% static '/images/guardanapo_amarelogirassol.png' %}" class="imagem">
+            <p class="dg">Guardanapos Linho Misto Ponto Ajour - Amarelo Girassol</p>
+            <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+        </div>
+        <div class="card">
+            <img src="{% static '/images/guardanapo_azulmarinho.png' %}" class="imagem">
+            <p class="dg">Guarfanapo Linho Misto - Azul Marinho</p>
+            <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+        </div>
+      </section>
+    </section>
+    </main>
+    <footer>
+        <p>oi</p>
+    </footer>
+  </body>
+</html>

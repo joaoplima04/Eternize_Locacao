@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <html lang="PT-BR">
+    <title>Eternize</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
+  <body>
+    <header>
+      {% include "categorias/header.html" %}
+    </header>
+    <main>
+      <section class="produtos">
+        <h2 class="titulo">Porta Guardanapos</h2>
+      </section>
+      <section class="cards_container">
+        <section class="cardsSection1">
+          <div class="card">
+              <img src="{% static '/images/portaguardanapo_costeladeadao.png' %}" class="imagem">
+              <p class="dg">Porta guardanapo costela de Adão</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+            </div>
+            <div class="card">
+              <img src="{% static '/images/portaguardanapo_concha.png' %}" class="imagem">
+              <p class="dg">Porta guardanapo de concha</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+            </div>
+            <div class="card">
+              <img src="{% static '/images/portaguardanapo_metal.png' %}" class="imagem">
+              <p class="dg">Porta Guardanapo de Metal</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+            </div>
+          <div class="card">
+            <img src="{% static '/images/portaguardanapo_inox.png' %}" class="imagem">
+            <p class="dg">Porta Guardanapo Inox</p>
+            <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+          </div>
+          <div class="card">
+              <img src="{% static '/images/portaguardanapo_azul.png' %}" class="imagem">
+              <p class="dg">Porta Guardanapo Miçanga Azul</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">modelos</a>
+            </div>
+            <div class="card">
+              <img src="{% static '/images/portaguardanapo_natalino.png' %}" class="imagem">
+              <p class="dg">Porta guardanapo natalino concha</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+            </div>
+          <div class="card">
+              <img src="{% static '/images/portaguardanapo_rosa.png' %}" class="imagem">
+              <p class="dg">Porta Guardanapo Rosa Dália</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+            </div>
+      </section>
+    </section>
+    </main>
+    <footer>
+        <p>oi</p>
+    </footer>
+  </body>
+</html>

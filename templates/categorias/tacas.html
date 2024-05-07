@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <html lang="PT-BR">
+    <title>Eternize</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
+  <body>
+    <header>
+      {% include "categorias/header.html" %}
+    </header>
+    <main>
+      <section class="produtos">
+        <h2 class="titulo">Taças</h2>
+      </section>
+      <section class="cardsSection1">
+        <div class="card">
+            <img src="{% static '/images/taca_vinhocristal.png' %}" class="imagem">
+            <p class="dg">Taça Água/Vinho Tinto Cristal Titanium Bohemia - Transparente 580ml</p>
+            <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+          </div>
+          <div class="card">
+            <img src="{% static '/images/taca_alexandra.png' %}" class="imagem">
+            <p class="dg">Taça de Água Alexandra</p>
+            <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+          </div>
+          <div class="card">
+            <img src="{% static '/images/taca_kleopatra.png' %}" class="imagem">
+            <p class="dg">Taça de Água Cristal Kleopatra - Transparente</p>
+            <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+          </div>
+      <section class="cardsSection1">
+        <div class="card">
+          <img src="{% static '/images/taca_elisabeth.png' %}" class="imagem">
+          <p class="dg">Taça de cristal Elisabeth/Bohemia para água</p>
+          <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+        </div>
+        <div class="card">
+            <img src="{% static '/images/taca_espumantebohemia.png' %}" class="imagem">
+            <p class="dg">Taça de Espumante Cristal Bohemia - Transparente 220 ML</p>
+            <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+          </div>
+          <div class="card">
+            <img src="{% static '/images/taca_lirio.png' %}" class="imagem">
+            <p class="dg">Taça de vidro para espumante - Lírio</p>
+            <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+          </div>
+      </section>
+      <section class="cardsSection1">
+        <div class="card">
+            <img src="{% static '/images/taca_cristallapidada.png' %}" class="imagem">
+            <p class="dg">Taça de vinho Cristal Lapidada - cor Vermelha</p>
+            <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+          </div>
+        <div class="card">
+            <img src="{% static '/images/taca_malva.png' %}" class="imagem">
+            <p class="dg">Taça Malva - Home Style</p>
+            <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+          </div>
+        <div class="card">
+            <img src="{% static '/images/taca_vinhobranco.png' %}" class="imagem">
+            <p class="dg">Taça Vinho branco Cristal Bohemia Titanium - Transparente - 450 ml</p>
+            <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+          </div>
+      </section>
+    </main>
+    <footer>
+        <p>oi</p>
+    </footer>
+  </body>
+</html>

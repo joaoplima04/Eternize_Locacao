@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <html lang="PT-BR">
+    <title>Eternize</title>
+    <link rel="stylesheet" href="{% static '/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
+  <body>
+    <header>
+      {% include "categorias/header.html" %}
+    </header>
+    <main>
+      <section class="produtos">
+        <h2 class="titulo">Chá e Café da Tarde</h2>
+      </section>
+      <section class="cards_container">
+        <section class="cardsSection1">
+          <div class="card">
+              <img src="{% static '/images/cha_kit3pecas.png' %}" class="imagem">
+              <p class="dg">kit 3 Peças para Chá/café - Porcelana EGG Wolff</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+            </div>
+            <div class="card">
+              <img src="{% static '/images/cha_pratoduplo.png' %}" class="imagem">
+              <p class="dg">Prato Duplo para Doce - Porcelana Vera Gold Wollf</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+            </div>
+            <div class="card">
+              <img src="{% static '/images/cha_pratoduplodoces.png' %}" class="imagem">
+              <p class="dg">Prato Duplo para doces - Porcelana EGG Wolff</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+            </div>
+          <div class="card">
+            <img src="{% static '/images/cha_triodecha.png' %}" class="imagem">
+            <p class="dg">Trio de chá - BULE E AÇUCAREIRO E MINI LEITEIRA - Porcelana Paddy Wolff</p>
+            <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+          </div>
+          <div class="card">
+              <img src="{% static '/images/cha_xicarapires.png' %}" class="imagem">
+              <p class="dg">Xícara de Chá com Pires - Porcelana Paddy Wolff</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">modelos</a>
+            </div>
+            <div class="card">
+              <img src="{% static '/images/cha_xicarafloral.png' %}" class="imagem">
+              <p class="dg">Xícara de Chá com Pires - Floral</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">modelos</a>
+            </div>
+          <div class="card">
+              <img src="{% static '/images/cha_xicaraporcelana.png' %}" class="imagem">
+              <p class="dg">Xícara de Chá com Pires - Porcelana EGG Wolff</p>
+              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+            </div>
+            <div class="card">
+                <img src="{% static '/images/cha_xicararosa.png' %}" class="imagem">
+                <p class="dg">Xícara de Chá com Pires Fractal Rosa</p>
+                <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
+              </div>
+      </section>
+    </section>
+    </main>
+    <footer>
+        <p>oi</p>
+    </footer>
+  </body>
+</html>
