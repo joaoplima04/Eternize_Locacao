@@ -2,8 +2,22 @@ from django.db import models
 from django.utils import timezone
 
 class Produto(models.Model):
+
+    OPCOES_CATEGORIA = [
+        ("PRATO RASO", "Prato Raso"),
+        ("GUARDANAPO", "Guardanapo"),
+        ("TALHER", "Talher"),
+        ("TACAS", "Tacas"),
+        ("TRILHOS DE MESA", "Trilhos de Mesa"),
+        ("SOUPLAT", "Souplat"),
+        ("JOGO AMERICANO", "Jogo Americano"),
+        ("CHA E CAFE", "Cha e Cafe"),
+        ("PRATO SOBREMESA", "Prato Sobremesa"),
+        ("PORTA GUARDANAPO", "Porta Guardanapo"),
+    ]
+
     nome = models.CharField(max_length=100)
-    categoria = models.CharField(max_length=100)
+    categoria = models.CharField(max_length=150,choices=OPCOES_CATEGORIA ,default='')
     preco = models.DecimalField(decimal_places=2, max_digits=10)
     quantidade_estoque = models.IntegerField
     imagem = models.CharField(max_length=100)
@@ -13,7 +27,7 @@ def __str__(self):
     return self.nome
 
 class Cliente(models.Model):
-    cpf = models.CharField(max_length=11, primary_key=True, default='11111111111') 
+    cpf = models.CharField(max_length=11, primary_key=True, default='') 
     nome = models.CharField(max_length=100)
     email = models.EmailField()  
     telefone = models.CharField(max_length=20)  
