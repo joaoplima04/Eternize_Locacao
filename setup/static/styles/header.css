@@ -1,0 +1,71 @@
+body {
+    background-color: #001b02;
+    overflow-x: hidden;
+}
+    .cabecario {
+    position: fixed;
+    position: top;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #001b02;
+    height: 150px;
+    width: 100%;
+    z-index: 1000;
+  }
+  .dirs {
+    position: relative;
+    left: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+  }
+  .logo {
+    position: relative;
+    left: 20px;
+    width: 100x;
+    }
+    .carrinho {
+    
+    }
+    .carrinho_mesage {
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 600;
+    font-family: "Poppins";
+    }
+    .login {
+    
+  }
+  .login_carrinho {
+    position: relative;
+    right: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  @media screen and (max-width: 768px) {
+    .cabecario {
+      flex-direction: column; /* Altera a direção do flexbox para coluna */
+      height: auto; /* Altura automática para acomodar o conteúdo */
+    }
+    .dirs, .login, .carrinho {
+      margin-top: 10px; /* Adiciona espaço entre os elementos */
+    }
+    .logo {
+      margin-left: auto; /* Move o logotipo para a direita */
+      margin-right: auto; /* Move o logotipo para a esquerda */
+    }
+    .dirs, .login, .carrinho {
+      text-align: center; /* Centraliza o texto */
+    }
+  }
