@@ -16,12 +16,20 @@ class Produto(models.Model):
         ("PORTA GUARDANAPO", "Porta Guardanapo"),
     ]
 
+    OPCOES_ESTILO = [
+        ("ELEGANTE", "Elegante"),
+        ("TROPICAL", "Tropical"),
+        ("FLORIDO", "Florido"),
+    ]
+
     nome = models.CharField(max_length=100)
-    categoria = models.CharField(max_length=150,choices=OPCOES_CATEGORIA ,default='')
+    categoria = models.CharField(max_length=150, choices=OPCOES_CATEGORIA, default='')
     preco = models.DecimalField(decimal_places=2, max_digits=10)
     quantidade_estoque = models.IntegerField
-    imagem = models.CharField(max_length=100)
+    imagem = models.ImageField(upload_to="imagens/", blank=True)
     cor = models.CharField(max_length=100)
+    estilo = models.CharField(max_length=100, choices=OPCOES_ESTILO, default='')
+    estoque = models.IntegerField(null=False, blank=False)
 
 def __str__(self):
     return self.nome

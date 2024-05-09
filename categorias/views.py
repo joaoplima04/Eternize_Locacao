@@ -34,3 +34,5 @@ def trilhos_de_mesa(request):
 def cha_e_cafe_da_tarde(request):
     return render(request, 'categorias/cha_e_cafe_da_tarde.html')
 
+def carrinho(request):
+    return render(request, 'categorias/carrinho.html')
