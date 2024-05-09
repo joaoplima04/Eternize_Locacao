@@ -14,8 +14,11 @@ body {
     z-index: 1000;
   }
   .dirs {
-    position: relative;
-    left: 120px;
+    position: absolute; /* Mudança de relative para absolute */
+    top: 50%; /* Define o topo da div para metade da altura da tela */
+    left: 50%; /* Define a esquerda da div para metade da largura da tela */
+    transform: translate(-50%, -50%); /* Move a div de volta em 50% da sua própria largura e altura */
+    margin: 0; /* Define margem para 0 para garantir centralização precisa */
     display: flex;
     flex-direction: row;
     justify-content: center;
