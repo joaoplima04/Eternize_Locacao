@@ -36,3 +36,9 @@ def cha_e_cafe_da_tarde(request):
 
 def carrinho(request):
     return render(request, 'categorias/carrinho.html')
+
+def cadastro(request):
+    return render(request, 'categorias/cadastro.html')
+
+def login(request):
+    return render(request, 'categorias/login.html')

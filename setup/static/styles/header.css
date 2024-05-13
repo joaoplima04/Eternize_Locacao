@@ -30,18 +30,12 @@ body {
     left: 20px;
     width: 100x;
     }
-    .carrinho {
-    
-    }
     .carrinho_mesage {
     font-size: 15px;
     color: #ffffff;
     font-weight: 600;
     font-family: "Poppins";
     }
-    .login {
-    
-  }
   .login_carrinho {
     position: relative;
     right: 100px;
