@@ -42,3 +42,6 @@ def cadastro(request):
 
 def login(request):
     return render(request, 'categorias/login.html')
+
+def buscar(request):
+    return render(request, "buscar.html")
