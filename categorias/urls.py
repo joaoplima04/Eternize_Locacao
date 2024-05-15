@@ -18,5 +18,4 @@ urlpatterns = [
     path('carrinho/', views.carrinho),
     path('cadastro/', views.cadastro),
     path('login/', views.login),
-    path("buscar", buscar, name="buscar"),
 ]

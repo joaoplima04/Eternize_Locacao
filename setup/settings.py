@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'categorias.apps.CategoriaConfig',
+    'categorias.apps.CategoriasConfig',
     'usuarios.apps.UsuariosConfig'
 ]
 
@@ -104,6 +104,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = 'categorias.Cliente'
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/

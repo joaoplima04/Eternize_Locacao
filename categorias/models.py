@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import AbstractUser
 
 class Produto(models.Model):
 
@@ -34,7 +35,7 @@ class Produto(models.Model):
 def __str__(self):
     return self.nome
 
-class Cliente(models.Model):
+class Cliente(AbstractUser):
     cpf = models.CharField(max_length=11, primary_key=True, default='') 
     nome = models.CharField(max_length=100)
     email = models.EmailField()  
