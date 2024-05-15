@@ -3,12 +3,6 @@ from .forms import RegistrationForm
 from .login_forms import LoginForm
 from django.contrib.auth import login, authenticate
 
-def cadastro(request):
-    return render(request, "usuarios/cadastro.html")
-
-def login(request):
-    return render(request, "usuarios/login.html")
-
 def register(request):
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
@@ -18,7 +12,7 @@ def register(request):
             return redirect('/')  # Redirect to home page after registration
     else:
         form = RegistrationForm()
-    return render(request, 'cadastro.html', {'form': form})
+    return render(request, 'usuarios/cadastro.html', {'form': form})
 
 def login_view(request):
     if request.method == 'POST':
@@ -29,11 +23,11 @@ def login_view(request):
             user = authenticate(request, username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('home')  # Redirect to home page after login
+                return redirect('/')  # Redirect to home page after login
             else:
                 # Handle invalid login credentials (optional)
                 print("Login inválido")
                 # You can also display an error message to the user
     else:
         form = LoginForm()
-    return render(request, 'login.html', {'form': form})
+    return render(request, 'usuarios/login.html', {'form': form})
