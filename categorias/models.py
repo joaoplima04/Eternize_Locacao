@@ -41,6 +41,7 @@ class Cliente(AbstractUser):
     email = models.EmailField()  
     telefone = models.CharField(max_length=20)  
     data_nascimento = models.DateField(default=timezone.now)  
+    senha = models.CharField(max_length=100)
 
 
     def __str__(self):

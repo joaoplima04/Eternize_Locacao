@@ -3,13 +3,79 @@ from categorias.models import Cliente
 from django.contrib.auth.hashers import make_password  # For password hashing
 
 class RegistrationForm(forms.Form):
-    email = forms.EmailField(label="Email", required=True)
-    nome = forms.CharField(label="Nome completo", max_length=100, required=True)
-    cpf = forms.CharField(label="CPF", max_length=100, required=True)
-    telefone = forms.CharField(label="Telefone", max_length=20, required=True)
-    data_nascimento = forms.DateField(label="Data Nascimento", required=True)
-    senha = forms.CharField(label="Senha de acesso", widget=forms.PasswordInput, required=True)
-    confirmar_senha = forms.CharField(label="Confirmação de senha", widget=forms.PasswordInput, required=True)
+    email = forms.EmailField(
+        label="Email",
+        required=True,
+        widget=forms.EmailInput(
+            attrs={
+                "class": "form-group",
+                "placeholder": "Digite seu Email"
+            }
+        )
+    )
+    nome = forms.CharField(
+        label="Nome completo",
+         max_length=100,
+          required=True,
+          widget=forms.TextInput(
+            attrs={
+                "class": "form-group",
+                "placeholder": "Digite seu nome completo"
+            }
+        )
+    )
+    cpf = forms.CharField(
+        label="CPF",
+        max_length=100,
+        required=True,
+        widget=forms.TextInput(
+            attrs={
+                "class": "form-group",
+                "placeholder": "Digite seu CPF"
+            }
+        )
+    )
+    telefone = forms.CharField(
+        label="Telefone",
+         max_length=20,
+          required=True,
+          widget=forms.TextInput(
+            attrs={
+                "class": "form-group",
+                "placeholder": "Digite seu telefone"
+            }
+        )
+    )
+    data_nascimento = forms.DateField(
+        label="Data Nascimento",
+         required=True,
+         widget=forms.DateInput(
+            attrs={
+                "class": "form-group",
+                "placeholder": "Digite sua data de nascimento"
+            }
+        )
+         )
+    senha = forms.CharField(
+        label="Senha de acesso",
+        required=True,
+        widget=forms.PasswordInput(
+            attrs={
+                "class": "form-group",
+                "placeholder": "Digite sua senha"
+            }
+        )
+    )
+    confirmar_senha = forms.CharField(
+        label="Confirmação de senha",
+        required=True,
+        widget=forms.PasswordInput(
+            attrs={
+                "class": "form-group",
+                "placeholder": "Confirme sua senha"
+            }
+        )
+    )
 
     def clean_confirmar_senha(self):
         senha = self.cleaned_data.get('senha')
@@ -25,8 +91,8 @@ class RegistrationForm(forms.Form):
             nome=self.cleaned_data['nome'],
             cpf=self.cleaned_data['cpf'],
             telefone=self.cleaned_data['telefone'],
-            data_nascimento=self.cleaned_data['telefone'],
-            password=make_password(self.cleaned_data['senha']),  # Hash password before saving
+            data_nascimento=self.cleaned_data['data_nascimento'],
+            senha=make_password(self.cleaned_data['senha']),  # Hash password before saving
         )
         if commit:
             cliente.save()

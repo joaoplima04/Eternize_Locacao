@@ -21,20 +21,14 @@
             <div class="card-body">
               <h5 class="card-title text-center">Login de Usuário</h5>
               <!-- Formulário de Login -->
-              <form>
-                <div class="mb-3">
-                  <label for="email" class="form-label">E-mail</label>
-                  <input type="text" class="form-control" id="email" placeholder="Digite seu email de usuário">
-                </div>
-                <div class="mb-3">
-                  <label for="password" class="form-label">Senha</label>
-                  <input type="password" class="form-control" id="password" placeholder="Digite sua senha">
-                </div>
-                <a href="/cadastro" data-toggle="modal" data-target="#modal-user-login" class="btn btn-buy pull-left">
-                  <i class="fa fa-user-o"></i>
-                  Não tenho cadastro
-              </a>
-                <div class="d-grid">
+              <form method="post">
+                {% csrf_token %}
+                {% for field in form.visible_fields %}
+                    <div class="form-group">
+                        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                        <input class="form-control"{{ field }}>
+                    </div>
+                {% endfor %}
                   <button type="submit" class="btn btn-primary btn-block">Entrar</button>
                 </div>
                 <div class="form-text">
