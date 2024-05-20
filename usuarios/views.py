@@ -26,7 +26,7 @@ def login_view(request):
                 return redirect('/')  # Redirect to home page after login
             else:
                 # Handle invalid login credentials (optional)
-                print("Login inválido")
+                form.add_error(None, 'Credenciais inválidas. Por favor, tente novamente.')
                 # You can also display an error message to the user
     else:
         form = LoginForm()

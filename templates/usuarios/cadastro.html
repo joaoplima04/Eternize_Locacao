@@ -24,28 +24,33 @@
                         <div class="card">
                             <div class="card-body">
                                 <h2 class="card-title text-center">Cadastro</h2>
-                                <form method="post">
+                                <form method="post" action="{% url 'cadastro' %}">
                                     {% csrf_token %}
-                                    {% for field in form.visible_fields %}
+                                    {% for field in form %}
                                         <div class="form-group">
                                             <label for="{{ field.id_for_label }}">{{ field.label }}</label>
                                             <input class="form-control"{{ field }}>
+                                            {% if field.errors %}
+                                                <div class="alert alert-danger mt-2">
+                                                    {% for error in field.errors %}
+                                                        <p>{{ error }}</p>
+                                                    {% endfor %}
+                                                </div>
+                                            {% endif %}
                                         </div>
                                     {% endfor %}
                                     <button type="submit" class="btn btn-primary btn-block">Enviar</button>
                                 </form>
                                 <div class="text-center mt-3">
-                                    <a href="/login">Já possui uma conta? Faça login</a>
+                                    <a href="{% url 'login' %}">Já possui uma conta? Faça login</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
             <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        </main>
-    </body>              
-</html>
+        </body>
+    </html>
