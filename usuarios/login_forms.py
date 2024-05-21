@@ -2,7 +2,7 @@ from django.contrib.auth import authenticate
 from django.contrib.auth.forms import AuthenticationForm  # Optional (built-in form)
 from django import forms
 
-class LoginForm(forms.Form):  # Use AuthenticationForm for built-in functionality
+class LoginForm(forms.Form):
     username = forms.EmailField(
         label="Email",
         max_length=255,

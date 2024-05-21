@@ -85,6 +85,7 @@ class RegistrationForm(forms.Form):
         return confirmar_senha
 
     def save(self, commit=True):
+        email = self.cleaned_data.get('email')
         # No need to create a User instance since we're using Cliente
         cliente = Cliente(
             email=self.cleaned_data['email'],
@@ -92,6 +93,7 @@ class RegistrationForm(forms.Form):
             cpf=self.cleaned_data['cpf'],
             telefone=self.cleaned_data['telefone'],
             data_nascimento=self.cleaned_data['data_nascimento'],
+            username = email.split('@')[0],
             senha=make_password(self.cleaned_data['senha']),  # Hash password before saving
         )
         if commit:
