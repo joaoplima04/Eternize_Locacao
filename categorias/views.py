@@ -70,7 +70,8 @@ def add_to_cart(request, product_id):
   if product_id in cart_items:
     cart_items[product_id]['quantity'] += 1
   else:
-    cart_items[product_id] = {'quantity': 1 }
+    product = Produto.objects.get(id=product_id)
+    cart_items[product_id] = {'quantity': 1 , 'item_price': str(product.preco)}
 
   # Update session with cart items
   session['cart_items'] = cart_items
@@ -85,11 +86,14 @@ def cart_view(request):
     session = request.session
     cart_items = session.get('cart_items', {})
 
+    #for _, details in cart_items.items():
+    #   cart_total_price += details['item_price']
+
     products = []
     for product_id, details in cart_items.items():
         try:
             product = Produto.objects.get(id=product_id)
-            products.append({'product': product, 'quantity': details['quantity']})
+            products.append({'product': product, 'quantity': details['quantity'], 'price': details['item_price']})
         except Produto.DoesNotExist:
             pass  # Handle the case where a product is not found
 
@@ -128,7 +132,9 @@ def update_quantity(request, product_id):
     if quantity < 1:
         quantity = 1
     if str(product_id) in cart_items:
+        product = Produto.objects.get(id=product_id)
         cart_items[str(product_id)]['quantity'] = quantity
+        cart_items[str(product_id)]['item_price'] = str(float(product.preco) * quantity)
 
     # Update session with cart items
     session['cart_items'] = cart_items
