@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Produto
+from django.urls import reverse
+from django.views.decorators.http import require_POST
 
 #Rotas
 
@@ -17,10 +19,22 @@ def jogos_americanos(request):
     return render(request, 'categorias/jogos_americanos.html')
 
 def pratos(request):
-    return render(request, 'categorias/pratos.html')
+  # Fetch products of the 'PRATO SOBREMESA' category
+  produtos = Produto.objects.filter(categoria='PRATO RASO')
+
+  context = {
+    'produtos': produtos,
+  }
+  return render(request, 'categorias/pratos.html', context)
 
 def pratos_sobremesa(request):
-    return render(request, 'categorias/pratos_sobremesa.html')
+  # Fetch products of the 'PRATO SOBREMESA' category
+  produtos = Produto.objects.filter(categoria='PRATO SOBREMESA')
+
+  context = {
+    'produtos': produtos,
+  }
+  return render(request, 'categorias/pratos_sobremesa.html', context)
 
 def porta_guardanapos(request):
     return render(request, 'categorias/porta_guardanapos.html')
@@ -68,20 +82,59 @@ def add_to_cart(request, product_id):
   return redirect('cart')
 
 def cart_view(request):
-  # Access the session
-  session = request.session
+    session = request.session
+    cart_items = session.get('cart_items', {})
 
-  # Get cart items (empty dict if not set)
-  cart_items = session.get('cart_items', {})
+    products = []
+    for product_id, details in cart_items.items():
+        try:
+            product = Produto.objects.get(id=product_id)
+            products.append({'product': product, 'quantity': details['quantity']})
+        except Produto.DoesNotExist:
+            pass  # Handle the case where a product is not found
 
-  # Calculate total cart amount (optional)
-  cart_total = 0
-  for item_id, item_data in cart_items.items():
-    product = Produto.objects.get(pk=item_id)  # Fetch product details
-    cart_total += product.price * item_data['quantity']
+    return render(request, 'categorias/carrinho.html', {'cart_items': products})
 
-  context = {
-    'cart_items': cart_items,
-    'cart_total': cart_total,
-  }
-  return render(request, 'cart.html', context)
+def remove_from_cart(request, product_id):
+    # Access the session
+    session = request.session
+
+    # Get cart items (empty dict if not set)
+    cart_items = session.get('cart_items', {})
+
+    # Remove the item from the cart
+    if str(product_id) in cart_items:
+        del cart_items[str(product_id)]
+
+    # Update session with cart items
+    session['cart_items'] = cart_items
+
+    # Save the updated session
+    session.save()
+
+    # Redirect to the cart page
+    return redirect(reverse('cart'))
+
+@require_POST
+def update_quantity(request, product_id):
+    # Access the session
+    session = request.session
+
+    # Get cart items (empty dict if not set)
+    cart_items = session.get('cart_items', {})
+
+    # Update the item quantity in the cart
+    quantity = int(request.POST.get('quantity', 1))
+    if quantity < 1:
+        quantity = 1
+    if str(product_id) in cart_items:
+        cart_items[str(product_id)]['quantity'] = quantity
+
+    # Update session with cart items
+    session['cart_items'] = cart_items
+
+    # Save the updated session
+    session.save()
+
+    # Redirect to the cart page
+    return redirect(reverse('cart'))

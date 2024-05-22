@@ -64,6 +64,12 @@ body {
     font-family: "Poppins";
     color: rgb(255, 252, 252);
     }
+  .titulo2 {
+    position: relative;
+    font-size: 35px;
+    font-family: "Poppins";
+    color: rgb(255, 252, 252);
+    }
   .produtos {
     position: relative;
     display: flex;
