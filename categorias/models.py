@@ -26,7 +26,7 @@ class Produto(models.Model):
     nome = models.CharField(max_length=100)
     categoria = models.CharField(max_length=150, choices=OPCOES_CATEGORIA, default='')
     preco = models.DecimalField(decimal_places=2, max_digits=10)
-    quantidade_estoque = models.IntegerField
+    quantidade_estoque = models.IntegerField(null=False, blank=False, default=0)
     imagem = models.ImageField(upload_to="imagens/", blank=True)
     cor = models.CharField(max_length=100)
     estilo = models.CharField(max_length=100, choices=OPCOES_ESTILO, default='')
@@ -53,9 +53,3 @@ class Aluguel(models.Model):
     data_aluguel = models.DateField(default=timezone.now)
     data_devolucao = models.DateField()
     preco_total = models.DecimalField(decimal_places=2, max_digits=10)
-
-class ItemAluguel(models.Model):
-    aluguel = models.ForeignKey(Aluguel, on_delete=models.CASCADE)
-    produto = models.ForeignKey(Produto, on_delete=models.CASCADE)
-    quantidade = models.PositiveIntegerField(default=1)
-    preco_item = models.DecimalField(decimal_places=2, max_digits=10)
