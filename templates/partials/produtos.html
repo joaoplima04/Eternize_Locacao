@@ -1,0 +1,12 @@
+{% load static %}
+<section class="cards_container">
+    <section class="cardsSection1">
+    {% for produto in produtos %}
+      <div class="cards">
+          <img src="{{ produto.imagem.url }}" class="imagem">
+          <p class="dg">{{ produto.nome }}</p>
+          <a href="{% url 'add_to_cart' produto.id %}" class="ancor">Alugar</a>
+      </div>
+    {% endfor %}
+    </section>
+</section>

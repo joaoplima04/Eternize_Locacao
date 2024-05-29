@@ -13,23 +13,13 @@
   </head>
   <body>
     <header>
-      {% include "categorias/header.html" %}
+      {% include "partials/header.html" %}
     </header>
     <main>
       <section class="produtos">
         <h2 class="titulo">Pratos Rasos</h2>
       </section>
-      <section class="cards_container">
-        <section class="cardsSection1">
-        {% for produto in produtos %}
-          <div class="cards">
-              <img src="{{ produto.imagem.url }}" class="imagem">
-              <p class="dg">{{ produto.nome }}</p>
-              <a href="{% url 'add_to_cart' produto.id %}" class="ancor">Alugar</a>
-          </div>
-        {% endfor %}
-        </section>
-      </section>
+     {% include "partials/produtos.html" %}
     </main>
     <footer>
         <p>oi</p>

@@ -31,7 +31,8 @@ class Produto(models.Model):
     cor = models.CharField(max_length=100)
     estilo = models.CharField(max_length=100, choices=OPCOES_ESTILO, default='')
     estoque = models.IntegerField(null=False, blank=False)
-
+    publicado = models.BooleanField(default=False)
+    
 def __str__(self):
     return self.nome
 

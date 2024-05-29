@@ -13,56 +13,13 @@
   </head>
   <body>
     <header>
-      {% include "categorias/header.html" %}
+      {% include "partials/header.html" %}
     </header>
     <main>
       <section class="produtos">
         <h2 class="titulo">Trilhos de mesa</h2>
       </section>
-      <section class="cards_container">
-        <section class="cardsSection1">
-          <div class=cards>
-              <img src="{% static '/images/cha_kit3pecas.png' %}" class="imagem">
-              <p class="dg">kit 3 Peças para Chá/café - Porcelana EGG Wolff</p>
-              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-            </div>
-            <div class=cards>
-              <img src="{% static '/images/cha_pratoduplo.png' %}" class="imagem">
-              <p class="dg">Prato Duplo para Doce - Porcelana Vera Gold Wollf</p>
-              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-            </div>
-            <div class=cards>
-              <img src="{% static '/images/cha_pratoduplodoces.png' %}" class="imagem">
-              <p class="dg">Prato Duplo para doces - Porcelana EGG Wolff</p>
-              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-            </div>
-          <div class=cards>
-            <img src="{% static '/images/cha_triodecha.png' %}" class="imagem">
-            <p class="dg">Trio de chá - BULE E AÇUCAREIRO E MINI LEITEIRA - Porcelana Paddy Wolff</p>
-            <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-          </div>
-          <div class=cards>
-              <img src="{% static '/images/cha_xicarapires.png' %}" class="imagem">
-              <p class="dg">Xícara de Chá com Pires - Porcelana Paddy Wolff</p>
-              <a target="_blank" href="guardanapos.html" class="ancor">modelos</a>
-            </div>
-            <div class=cards>
-              <img src="{% static '/images/cha_xicarafloral.png' %}" class="imagem">
-              <p class="dg">Xícara de Chá com Pires - Floral</p>
-              <a target="_blank" href="guardanapos.html" class="ancor">modelos</a>
-            </div>
-          <div class=cards>
-              <img src="{% static '/images/cha_xicaraporcelana.png' %}" class="imagem">
-              <p class="dg">Xícara de Chá com Pires - Porcelana EGG Wolff</p>
-              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-            </div>
-            <div class=cards>
-                <img src="{% static '/images/cha_xicararosa.png' %}" class="imagem">
-                <p class="dg">Xícara de Chá com Pires Fractal Rosa</p>
-                <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-              </div>
-      </section>
-    </section>
+      {% include "partials/produtos.html" %}
     </main>
     <footer>
         <p>oi</p>

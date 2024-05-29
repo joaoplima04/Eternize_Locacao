@@ -13,86 +13,13 @@
   </head>
   <body>
     <header>
-      {% include "categorias/header.html" %}
+      {% include "partials/header.html" %}
     </header>
     <main>
       <section class="produtos">
         <h2 class="titulo">Jogos Americanos</h2>
       </section>
-      <section class="cards_container">
-        <section class="cardsSection1">
-          <div class=cards>
-              <img src="{% static '/images/jogoamericano_bordadourada.png' %}" class="imagem">
-              <p class="dg">Jogo Americano - borda dourada</p>
-              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-            </div>
-            <div class=cards>
-              <img src="{% static '/images/jogoamericano_arabesco.png' %}" class="imagem">
-              <p class="dg">Jogo Americano Arabesco</p>
-              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-            </div>
-            <div class=cards>
-              <img src="{% static '/images/jogoamericano_bordaazul.png' %}" class="imagem">
-              <p class="dg">Jogo Americano Borda Azul Marinho</p>
-              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-            </div>
-          <div class=cards>
-            <img src="{% static '/images/jogoamericano_bordadourada2.png' %}" class="imagem">
-            <p class="dg">Jogo Americano Borda Dourada</p>
-            <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-          </div>
-          <div class=cards>
-              <img src="{% static '/images/jogoamericano_bordado.png' %}" class="imagem">
-              <p class="dg">Jogo Americano Bordado</p>
-              <a target="_blank" href="guardanapos.html" class="ancor">modelos</a>
-            </div>
-            <div class=cards>
-              <img src="{% static '/images/jogoamericano_bordado2.png' %}" class="imagem">
-              <p class="dg">Jogo Americano Bordado</p>
-              <a target="_blank" href="guardanapos.html" class="ancor">modelos</a>
-            </div>
-          <div class=cards>
-              <img src="{% static '/images/jogoamericano_bordadoazul.png' %}" class="imagem">
-              <p class="dg">Jogo Americano Bordado Azul Bebê</p>
-              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-            </div>
-          <div class=cards>
-              <img src="{% static '/images/jogoamericano_bordadobranco.png' %}" class="imagem">
-              <p class="dg">Jogo Americano Branco Bordado</p>
-              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-            </div>
-          <div class=cards>
-              <img src="{% static '/images/jogoamericano_duplaface.png' %}" class="imagem">
-              <p class="dg">Jogo Americano Dupla Face Vermelho/Branco Bordado Dourado</p>
-              <a target="_blank" href="guardanapos.html" class="ancor">modelos</a>
-            </div>
-          <div class=cards>
-              <img src="{% static '/images/jogoamericano_linhorendado.png' %}" class="imagem">
-              <p class="dg">Jogo Americano em Linho Rendado - Off White</p>
-              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-          </div>
-          <div class=cards>
-              <img src="{% static '/images/jogoamericano_floralbege.png' %}" class="imagem">
-              <p class="dg">Jogo Americano Floral Bege</p>
-              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-          </div>
-          <div class=cards>
-              <img src="{% static '/images/jogoamericano_linhomisto.png' %}" class="imagem">
-              <p class="dg">Jogo Americano Linho Misto Ponto Ajour - Vermelho</p>
-              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-          </div>
-        <div class=cards>
-          <img src="{% static '/images/jogoamericano_preto.png' %}" class="imagem">
-          <p class="dg">Jogo Americano Preto Bordado Branco</p>
-          <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-      </div>
-      <div class=cards>
-          <img src="{% static '/images/jogoamericano_tulipas.png' %}" class="imagem">
-          <p class="dg">Jogo Americano Tulipas</p>
-          <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-      </div>
-    </section>
-  </section>
+      {% include "partials/produtos.html" %}
     </main>
     <footer>
         <p>oi</p>

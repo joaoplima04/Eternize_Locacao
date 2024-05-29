@@ -13,37 +13,13 @@
   </head>
   <body>
     <header>
-      {% include "categorias/header.html" %}
+      {% include "partials/header.html" %}
     </header>
     <main>
       <section class="produtos">
         <h2 class="titulo">Talheres</h2>
       </section>
-      <section class="cards_container">
-      <section class="cardsSection1">
-        <div class=cards>
-            <img src="{% static '/images/garfofacasob_dourados.png' %}" class="imagem">
-            <p class="dg">Garfo e faca de sobremesa dourados Berna Wollf</p>
-            <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-          </div>
-          <div class=cards>
-            <img src="{% static '/images/garfofacaref_dourados.png' %}" class="imagem">
-            <p class="dg">Garfo e faca refeição dourados - Berna (wollf)</p>
-            <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-          </div>
-          <div class=cards>
-            <img src="{% static '/images/talheres_bambu.png' %}" class="imagem">
-            <p class="dg">Kit talheres - Cabo Bambu Natural</p>
-            <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-          </div>
-      <section class="cardsSection1">
-        <div class=cards>
-          <img src="{% static '/images/talheres_douradoswolf.png' %}" class="imagem">
-          <p class="dg">Kit talheres Dourados wollf (garfo / faca de jantar e garfo e faca de sobremesa colherzinha de sobremesa)</p>
-          <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-        </div>
-      </section>
-    </section>
+      {% include "partials/produtos.html" %}
     </main>
     <footer>
         <p>oi</p>

@@ -13,81 +13,13 @@
   </head>
   <body>
     <header>
-      {% include "categorias/header.html" %}
+      {% include "partials/header.html" %}
     </header>
     <main>
       <section class="produtos">
         <h2 class="titulo">Souplats</h2>
       </section>
-      <section class="cards_container">
-        <section class="cardsSection1">
-          <div class=cards>
-              <img src="{% static '/images/souplat_rosa.png' %}" class="imagem">
-              <p class="dg">Sousplat Basic Rosa</p>
-              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-            </div>
-            <div class=cards>
-              <img src="{% static '/images/souplat_dourado.png' %}" class="imagem">
-              <p class="dg">Sousplat Colonial Circular Dourado</p>
-              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-            </div>
-            <div class=cards>
-              <img src="{% static '/images/souplat_cristal.png' %}" class="imagem">
-              <p class="dg">Sousplat Cristal Pearl - Wolff</p>
-              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-            </div>
-          <div class=cards>
-            <img src="{% static '/images/souplat_cromus.png' %}" class="imagem">
-            <p class="dg">Sousplat Cromus Rosa</p>
-            <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-          </div>
-          <div class=cards>
-              <img src="{% static '/images/souplat_bordadourada.png' %}" class="imagem">
-              <p class="dg">Sousplat de Cristal Borda Dourada WOLFF</p>
-              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-            </div>
-            <div class=cards>
-              <img src="{% static '/images/souplat_azul.png' %}" class="imagem">
-              <p class="dg">Sousplat de Plástico - Azul Borda Dourada</p>
-              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-            </div>
-          <div class=cards>
-              <img src="{% static '/images/souplat_vidroprateado.png' %}" class="imagem">
-              <p class="dg">Sousplat de Vidro Borda Prateada</p>
-              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-            </div>
-          <div class=cards>
-              <img src="{% static '/images/souplat_plasticodourado.png' %}" class="imagem">
-              <p class="dg">Sousplat Dourado Plástico - Wolff</p>
-              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-            </div>
-          <div class=cards>
-              <img src="{% static '/images/souplat_elizabeth.png' %}" class="imagem">
-              <p class="dg">Sousplat Elizabeth - borda dourada - Home Style</p>
-              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-            </div>
-          <div class=cards>
-              <img src="{% static '/images/souplat_fendi.png' %}" class="imagem">
-              <p class="dg">Sousplat Fendi</p>
-              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-          </div>
-          <div class=cards>
-              <img src="{% static '/images/souplat_galles.png' %}" class="imagem">
-              <p class="dg">Sousplat Galles Verde</p>
-              <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-          </div>
-        <div class=cards>
-          <img src="{% static '/images/souplat_perolado.png' %}" class="imagem">
-          <p class="dg">Sousplat perolado borda dourada</p>
-          <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-        </div>
-        <div class=cards>
-          <img src="{% static '/images/souplat_gallesvermelho.png' %}" class="imagem">
-          <p class="dg">Sousplat Galles Vermelho</p>
-          <a target="_blank" href="guardanapos.html" class="ancor">Alugar</a>
-        </div>
-      </section>
-    </section>
+          {% include "partials/produtos.html" %}
     </main>
     <footer>
         <p>oi</p>

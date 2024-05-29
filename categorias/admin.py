@@ -3,7 +3,7 @@ from .models import Produto
 
 
 class ListandoProdutos(admin.ModelAdmin):
-    list_display = ("id", "nome", "preco")
+    list_display = ("id", "nome", "preco", "publicado")
     list_display_links = ("id", "nome")
     search_fields = ("nome",)
     list_filter = ("categoria",)

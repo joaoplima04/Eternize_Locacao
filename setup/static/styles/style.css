@@ -4,7 +4,7 @@ body {
    }
    main {
     position: relative;
-    top: 300px;
+    top: 150px;
     display: flex;
     flex-direction: column;
     gap: 100px;
@@ -77,6 +77,7 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 100px;
+    margin-bottom: 100px;
   }
   .cards_container {
     max-width: 1000px; /* Defina a largura máxima desejada para o container pai */
@@ -90,6 +91,7 @@ body {
   }
   .imagem {
     width: 250px;
+    border-radius: 20px;
   }
   .dg {
     color: rgb(255, 255, 255);
