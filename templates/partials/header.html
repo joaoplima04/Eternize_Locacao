@@ -44,16 +44,16 @@
         <div class="d-flex">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorias</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/pratos">Prato Raso</a></li>
-            <li><a class="dropdown-item" href="/guardanapos">Guardanapos</a></li>
-            <li><a class="dropdown-item" href="/talheres">Talheres</a></li>
-            <li><a class="dropdown-item" href="/tacas">Taças</a></li>
-            <li><a class="dropdown-item" href="/trilhos_de_mesa">Trilhos de Mesa</a></li>
-            <li><a class="dropdown-item" href="/souplats">Souplat</a></li>
-            <li><a class="dropdown-item" href="/jogos_americanos">Jogo Americano</a></li>
-            <li><a class="dropdown-item" href="/cha_e_cafe_da_tarde">Chá e Café</a></li>
-            <li><a class="dropdown-item" href="/pratos_sobremesa">Pratos Sobremesa</a></li>
-            <li><a class="dropdown-item" href="/porta_guardanapos">Porta Guardanapo</a></li>
+            <li><a class="dropdown-item" href={% url 'categorias' 'PRATO RASO' %}>Prato Raso</a></li>
+            <li><a class="dropdown-item" href={% url 'categorias' 'GUARDANAPO' %}>Guardanapos</a></li>
+            <li><a class="dropdown-item" href={% url 'categorias' 'TALHER' %}>Talheres</a></li>
+            <li><a class="dropdown-item" href={% url 'categorias' 'TACAS' %}>Taças</a></li>
+            <li><a class="dropdown-item" href={% url 'categorias' 'TRILHOS DE MESA' %}>Trilhos de Mesa</a></li>
+            <li><a class="dropdown-item" href={% url 'categorias' 'SOUPLAT' %}>Souplat</a></li>
+            <li><a class="dropdown-item" href={% url 'categorias' 'JOGO AMERICANO' %}>Jogo Americano</a></li>
+            <li><a class="dropdown-item" href={% url 'categorias' 'CHA E CAFE' %}>Chá e Café</a></li>
+            <li><a class="dropdown-item" href={% url 'categorias' 'PRATO SOBREMESA' %}>Pratos Sobremesa</a></li>
+            <li><a class="dropdown-item" href={% url 'categorias' 'PORTA GUARDANAPO' %}>Porta Guardanapo</a></li>
           </ul>
           <form class="ms-auto d-flex">
             <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">

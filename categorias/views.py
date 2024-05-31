@@ -9,85 +9,13 @@ from django.views.decorators.http import require_POST
 def index(request):
     return render(request, 'categorias/index.html')
 
-def guardanapos(request):
-    produtos = Produto.objects.filter(categoria='GUARDANAPO').filter(publicado=True)
-
+def categorias(request, categoria_name):
+    produtos = Produto.objects.filter(categoria=categoria_name).filter(publicado=True)
     context = {
         'produtos': produtos,
+        'categoria': categoria_name
     }
-    return render(request, 'categorias/guardanapo.html', context)
-
-def souplats(request):
-    produtos = Produto.objects.filter(categoria='SOUPLAT').filter(publicado=True)
-
-    context = {
-        'produtos': produtos,
-    }
-    return render(request, 'categorias/souplats.html', context)
-
-def jogos_americanos(request):
-    produtos = Produto.objects.filter(categoria='JOGO AMERICANO').filter(publicado=True)
-
-    context = {
-        'produtos': produtos,
-    }
-    return render(request, 'categorias/jogos_americanos.html', context)
-
-def pratos(request):
-    produtos = Produto.objects.filter(categoria='PRATO RASO').filter(publicado=True)
-
-    context = {
-        'produtos': produtos,
-    }
-    return render(request, 'categorias/pratos.html', context)
-
-def pratos_sobremesa(request):
-  produtos = Produto.objects.filter(categoria='PRATO SOBREMESA').filter(publicado=True)
-
-  context = {
-    'produtos': produtos,
-  }
-  return render(request, 'categorias/pratos_sobremesa.html', context)
-
-def porta_guardanapos(request):
-    produtos = Produto.objects.filter(categoria='PORTA GUARDANAPO').filter(publicado=True)
-
-    context = {
-        'produtos': produtos,
-    }
-    return render(request, 'categorias/porta_guardanapos.html', context)
-
-def tacas(request):
-    produtos = Produto.objects.filter(categoria='TACAS').filter(publicado=True)
-
-    context = {
-        'produtos': produtos,
-    }
-    return render(request, 'categorias/tacas.html', context)
-
-def talheres(request):
-    produtos = Produto.objects.filter(categoria='TALHERE').filter(publicado=True)
-
-    context = {
-        'produtos': produtos,
-    }
-    return render(request, 'categorias/talheres.html', context)
-
-def trilhos_de_mesa(request):
-    produtos = Produto.objects.filter(categoria='TRILHOS DE MESA').filter(publicado=True)
-
-    context = {
-        'produtos': produtos,
-    }
-    return render(request, 'categorias/trilhos_de_mesa.html', context)
-
-def cha_e_cafe_da_tarde(request):
-    produtos = Produto.objects.filter(categoria='CHA E CAFE').filter(publicado=True)
-
-    context = {
-        'produtos': produtos,
-    }
-    return render(request, 'categorias/cha_e_cafe_da_tarde.html', context)
+    return render(request, 'categorias/categoria.html', context)
 
 def carrinho(request):
     return render(request, 'categorias/carrinho.html')
