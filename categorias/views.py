@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
 from .models import Produto
 from django.urls import reverse
 from django.views.decorators.http import require_POST
@@ -51,9 +50,10 @@ def add_to_cart(request, product_id):
 def cart_view(request):
     session = request.session
     cart_items = session.get('cart_items', {})
+    cart_total_price = 0.0
 
-    #for _, details in cart_items.items():
-    #   cart_total_price += details['item_price']
+    for _, details in cart_items.items():
+       cart_total_price += float(details['item_price'])
 
     products = []
     for product_id, details in cart_items.items():
@@ -63,7 +63,7 @@ def cart_view(request):
         except Produto.DoesNotExist:
             pass  # Handle the case where a product is not found
 
-    return render(request, 'categorias/carrinho.html', {'cart_items': products})
+    return render(request, 'categorias/carrinho.html', {'cart_items': products, 'cart_total': cart_total_price})
 
 def remove_from_cart(request, product_id):
     # Access the session

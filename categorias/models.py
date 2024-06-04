@@ -10,7 +10,7 @@ class Produto(models.Model):
         ("TALHER", "Talher"),
         ("TACAS", "Tacas"),
         ("TRILHOS DE MESA", "Trilhos de Mesa"),
-        ("SOUPLAT", "Souplat"),
+        ("SOUSPLAT", "Sousplat"),
         ("JOGO AMERICANO", "Jogo Americano"),
         ("CHA E CAFE", "Cha e Cafe"),
         ("PRATO SOBREMESA", "Prato Sobremesa"),
@@ -30,7 +30,6 @@ class Produto(models.Model):
     imagem = models.ImageField(upload_to="imagens/", blank=True)
     cor = models.CharField(max_length=100)
     estilo = models.CharField(max_length=100, choices=OPCOES_ESTILO, default='')
-    estoque = models.IntegerField(null=False, blank=False)
     publicado = models.BooleanField(default=False)
     
 def __str__(self):
