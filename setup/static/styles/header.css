@@ -1,69 +1,75 @@
 body {
-    background-color: #001b02;
-    overflow-x: hidden;
+  background-color: #001b02;
+  overflow-x: hidden;
 }
-    .cabecario {
-    position: fixed;
-    position: top;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 700px;
-    background-color: #001b02;
-    height: 150px;
-    width: 100%;
-    z-index: 1000;
+
+.cabecario {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 700px;
+  background-color: #001b02;
+  height: 150px;
+  width: 100%;
+  z-index: 1000;
+}
+
+.dirs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.logo {
+  position: relative;
+  left: 20px;
+  width: 100px;
+}
+
+.carrinho_mesage {
+  font-size: 15px;
+  color: #ffffff;
+  font-weight: 600;
+  font-family: "Poppins";
+}
+
+.login_carrinho {
+  position: relative;
+  right: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .cabecario {
+    flex-direction: column;
+    height: auto;
   }
-  .dirs {
-    position: absolute; /* Mudança de relative para absolute */
-    top: 50%; /* Define o topo da div para metade da altura da tela */
-    left: 50%; /* Define a esquerda da div para metade da largura da tela */
-    transform: translate(-50%, -50%); /* Move a div de volta em 50% da sua própria largura e altura */
-    margin: 0; /* Define margem para 0 para garantir centralização precisa */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
-    align-items: center;
+  .dirs, .login, .carrinho {
+    margin-top: 10px;
   }
   .logo {
-    position: relative;
-    left: 20px;
-    width: 100x;
-    }
-    .carrinho_mesage {
-    font-size: 15px;
-    color: #ffffff;
-    font-weight: 600;
-    font-family: "Poppins";
-    }
-  .login_carrinho {
-    position: relative;
-    right: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
-    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
   }
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  .dirs, .login, .carrinho {
+    text-align: center;
   }
-  @media screen and (max-width: 768px) {
-    .cabecario {
-      flex-direction: column; /* Altera a direção do flexbox para coluna */
-      height: auto; /* Altura automática para acomodar o conteúdo */
-    }
-    .dirs, .login, .carrinho {
-      margin-top: 10px; /* Adiciona espaço entre os elementos */
-    }
-    .logo {
-      margin-left: auto; /* Move o logotipo para a direita */
-      margin-right: auto; /* Move o logotipo para a esquerda */
-    }
-    .dirs, .login, .carrinho {
-      text-align: center; /* Centraliza o texto */
-    }
-  }
+}

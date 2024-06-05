@@ -1,201 +1,158 @@
 body {
   background-color: #001b02;
   overflow-x: hidden;
-   }
-   main {
-    position: relative;
-    top: 150px;
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
-   }
-   * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  a {
-    text-decoration: none;
-  }
-   .poppins-regular {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }    
-  .dirs {
-    position: relative;
-    left: 120px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
-    align-items: center;
-  }
-  .carrinho {
-    position: relative;
-    right: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  .login {
-    position: relative;
-    left: 170px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  .carrinho_mesage {
-    font-size: 15px;
-    color: #ffffff;
-    font-weight: 600;
-    font-family: "Poppins";
-    }
-  .mesage {
+}
+
+main {
+  position: relative;
+  top: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dirs {
+  position: relative;
+  left: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.carrinho {
+  position: relative;
+  right: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  position: relative;
+  left: 170px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.carrinho_mesage {
+  font-size: 15px;
+  color: #ffffff;
+  font-weight: 600;
+  font-family: "Poppins";
+}
+
+.mesage {
   font-size: 15px;
   color: #ffffff;
   font-family: "Poppins";
-  }
-  .titulo {
-    position: relative;
-    font-size: 25px;
-    font-family: "Poppins";
-    color: rgb(255, 252, 252);
-    }
-  .titulo2 {
-    position: relative;
-    font-size: 35px;
-    font-family: "Poppins";
-    color: rgb(255, 252, 252);
-    }
-  .produtos {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    gap: 100px;
-    margin-bottom: 100px;
-  }
-  .cards_container {
-    max-width: 1000px; /* Defina a largura máxima desejada para o container pai */
-    margin: 0 auto; /* Centralize o container pai na tela */
-  }
-  .cardsSection1 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-  .imagem2 {
-    width: 250px;
-    border-radius: 20px;
-  }
-  .dg {
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    font: bold; 
-  }
-  .cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #3d662c;
-    width: 320px;
-    height: 400px;
-    border-radius: 50px;
-    gap: 20px;
-  }
-  .preço {
-    color: green;
-    font-size: 25px;
-    font-style: italic;
-    font: bold;
-  }
-  .di2 {
-    position: relative;
-    left: 100px;
-  }
-  .preçoi1 {
-    position: relative;
-    left: 100px;
-  }
-  .preçoi2 {
-    position: relative;
-    left: 90px;
-  }
-  .logo {
-    width: 150px;
-  }
-  .image-container {
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 50%;
-    position: relative;
-    left: 100px;
-    bottom: 250px;
-  }
-  .image-container img {
-    width: 200px;
-  }
-  .ancor {
-    font-size: 20px;
-    font-style: bold;
-    color: rgb(0, 0, 0);
 }
+
+.titulo {
+  position: relative;
+  font-size: 25px;
+  font-family: "Poppins";
+  color: rgb(255, 252, 252);
+}
+
+.titulo2 {
+  position: relative;
+  font-size: 35px;
+  font-family: "Poppins";
+  color: rgb(255, 252, 252);
+}
+
+.produtos {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+  margin-bottom: 100px;
+}
+
+.cards_container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cardsSection1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.imagem2 {
+  width: 250px;
+  border-radius: 20px;
+}
+
+.dg {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #3d662c;
+  width: 320px;
+  height: 400px;
+  border-radius: 50px;
+  gap: 20px;
+}
+
+.di2 {
+  position: relative;
+  left: 100px;
+}
+
+.image-container {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+  left: 100px;
+  bottom: 250px;
+}
+
+.image-container img {
+  width: 200px;
+}
+
+.ancor {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
 footer {
-position: relative;
-top: 1000px;
+  position: relative;
+  top: 1000px;
 }
-.imagemHeader {
-width: 30px;
-}
-  /*
-  .ancor0 {
-    position: relative;
-  }
-  .ancor1 {
-      position: relative;
-  }
-  .ancor2 {
-      position: relative;
-  }
-  .item3 {
-  }
-  .di3 {
-      position: relative;
-  }
-  .ancor3 {
-      position: relative;
-      left: 545px;
-  }
-  .item4 {
-  }
-  .di4 {
-    
-  }
-  .ancor4 {
-    
-  }
-  .ancor0 {
-    font-size: 30px;
-    color: green;
-  }
-  .image-container2 img {
-    width: 40px;
-  }
-  .item5 {
-  }
-  .di5 {
-
-  }
-  .ancor5 {
-
-  }
-  */
-    
-  
