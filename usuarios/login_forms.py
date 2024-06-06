@@ -3,7 +3,7 @@ from django.contrib.auth.forms import AuthenticationForm  # Optional (built-in f
 from django import forms
 
 class LoginForm(forms.Form):
-    username = forms.EmailField(
+    email = forms.EmailField(
         label="Email",
         max_length=255,
         widget=forms.EmailInput(

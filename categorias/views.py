@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from .models import Produto
 from django.urls import reverse
 from django.views.decorators.http import require_POST
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 #Rotas
 
@@ -47,10 +49,12 @@ def add_to_cart(request, product_id):
   # Redirect or perform other actions
   return redirect('cart')
 
+@login_required(login_url='/login/')
 def cart_view(request):
     session = request.session
     cart_items = session.get('cart_items', {})
     cart_total_price = 0.0
+    is_auth = request.user.is_authenticated
 
     for _, details in cart_items.items():
        cart_total_price += float(details['item_price'])
@@ -62,8 +66,12 @@ def cart_view(request):
             products.append({'product': product, 'quantity': details['quantity'], 'price': details['item_price']})
         except Produto.DoesNotExist:
             pass  # Handle the case where a product is not found
+    
+    context = {'cart_items': products,
+               'cart_total': cart_total_price,
+               'is_authenticated': is_auth}
 
-    return render(request, 'categorias/carrinho.html', {'cart_items': products, 'cart_total': cart_total_price})
+    return render(request, 'categorias/carrinho.html', context)
 
 def remove_from_cart(request, product_id):
     # Access the session

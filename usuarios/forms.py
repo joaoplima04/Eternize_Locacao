@@ -94,8 +94,8 @@ class RegistrationForm(forms.Form):
             telefone=self.cleaned_data['telefone'],
             data_nascimento=self.cleaned_data['data_nascimento'],
             username = email.split('@')[0],
-            senha=make_password(self.cleaned_data['senha']),  # Hash password before saving
         )
+        cliente.set_password(self.cleaned_data['senha'])
         if commit:
             cliente.save()
         return cliente

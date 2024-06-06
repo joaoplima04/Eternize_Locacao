@@ -1,59 +1,42 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="{% static 'styles/style.css' %}">
-  <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-</head>
-<body>
-  <header>
-    {% include "partials/header.html" %}
-  </header>
-  <main>
-    <body>
-      <div class="container">
-          <div class="row justify-content-center mt-5">
-              <div class="col-md-6">
-                  <div class="card">
-                      <div class="card-body">
-                          <h2 class="card-title text-center">Login</h2>
-                          <form method="post" action="{% url 'login' %}">
-                              {% csrf_token %}
-                              {% for field in form %}
-                                  <div class="form-group">
-                                      <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-                                      <input class="form-control"{{ field }}>
-                                      {% if field.errors %}
-                                          <div class="alert alert-danger mt-2">
-                                              {% for error in field.errors %}
-                                                  <p>{{ error }}</p>
-                                              {% endfor %}
-                                          </div>
-                                      {% endif %}
-                                  </div>
-                              {% endfor %}
-                              <button type="submit" class="btn btn-primary btn-block">Entrar</button>
-                          </form>
-                          {% if form.non_field_errors %}
-                              <div class="alert alert-danger mt-2">
-                                  {% for error in form.non_field_errors %}
-                                      <p>{{ error }}</p>
-                                  {% endfor %}
-                              </div>
-                          {% endif %}
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  </body>
-</html>
+{% extends "partials/base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title text-center">Login</h2>
+                    <form method="post" action="{% url 'login' %}">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            <div class="form-group">
+                                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                                <input class="form-control"{{ field }}>
+                                {% if field.errors %}
+                                    <div class="alert alert-danger mt-2">
+                                        {% for error in field.errors %}
+                                            <p>{{ error }}</p>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        {% endfor %}
+                        <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+                        <div class="text-center mt-3">
+                            <a href="{% url 'cadastro' %}">Não possui uma conta? Cadastre-se</a>
+                        </div>
+                    </form>
+                    {% if form.non_field_errors %}
+                        <div class="alert alert-danger mt-2">
+                            {% for error in form.non_field_errors %}
+                                <p>{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -39,11 +39,13 @@ class Cliente(AbstractUser):
     cpf = models.CharField(max_length=11, primary_key=True, default='')
     username = models.CharField(max_length=150, unique=True) 
     nome = models.CharField(max_length=100)
-    email = models.EmailField()  
+    email = models.EmailField(unique=True)  
     telefone = models.CharField(max_length=20)  
     data_nascimento = models.DateField(default=timezone.now)  
-    senha = models.CharField(max_length=100)
+    password = models.CharField(max_length=128)
 
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['username', 'cpf', 'nome', 'telefone', 'data_nascimento']
 
     def __str__(self):
         return self.nome
